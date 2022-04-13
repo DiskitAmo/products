@@ -6,7 +6,7 @@ import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Typography from "@mui/material/Typography"
-import { Box, Button, CardActionArea, CardActions } from "@mui/material"
+import { Box, CardActionArea } from "@mui/material"
 
 const IndexPage = ({ data }) => {
   const [productlist, setProductlist] = useState([])
@@ -41,7 +41,8 @@ const IndexPage = ({ data }) => {
                     component="img"
                     height="140"
                     image={item.node.image.publicUrl}
-                    alt="green iguana"
+                    alt="products"
+                    sx={{ objectFit: "contain !important" }}
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
