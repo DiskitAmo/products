@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
 
   useEffect(() => {
     setProductlist(products)
-  }, [])
+  }, [products])
 
   return (
     <div>
@@ -45,7 +45,12 @@ const IndexPage = ({ data }) => {
                     sx={{ objectFit: "contain !important" }}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ textAlign: "center" }}
+                    >
                       {item.node.name}
                     </Typography>
                     <Typography
